@@ -1,0 +1,96 @@
+.mobile-nav {
+    z-index: 11;
+    position: fixed;
+    inset: 0;
+    overflow-y: auto;
+    width: 320px;
+    height: 100%;
+    padding: 19px 24px 32px 24px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),-2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__logo {
+        margin-right: auto;
+    }
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: left;
+        gap: 16px;
+        margin-bottom: 4px;
+    }
+    &__langs {
+        margin-top: 14px;
+    }
+    &__email {
+    font-size: 16px;
+    font-weight: 500;
+    }
+    &__phone {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+    }
+    &__lang {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__lang--active {
+        color: #7E7E82;
+    }
+    // &__footer-button--icon-profile {
+    //     width: 20px;
+    //     height: 20px;
+    //     background-image: url('sprites.svg#ic_profile');    
+    // }
+}
+.mobile-nav-menu {
+    margin-bottom: auto;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+    &__link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        font-size: 16px;
+        font-weight: 500;
+        transition: transform 0.2 ease-out;
+        
+        @media (min-width:1119.98px) {
+            &:hover:not(&--active) {
+                color: #020116;
+                transform: scale(1.05);
+            }
+        }    
+    }
+    &__link--active {
+        color: rgb(126, 126, 130);
+    }
+    &__link--active::before {
+        position: absolute;
+        content: '';
+        left: -24px;
+        width: 4px;
+        height: 32px;
+        border-radius: 0 50px 50px 0;
+        background-color: #41F6D7;
+    }
+}
