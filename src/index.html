@@ -1,13 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <p class="test"></p>
+    <aside class="mobile-nav" aria-label="Мобильная навигация">
+      <div class="mobile-nav__header">
+        <button
+          class="action-button mobile-nav__header-button--cross"
+          aria-label="Кнопка закрыть меню"
+          type="button"
+        >
+          <svg class="icon icon--cross">
+            <use href="img/icons/sprites.svg#ic_cross"></use>
+          </svg>
+        </button>
+        <a
+          class="logo mobile-nav__logo"
+          href="#!"
+          aria-label="Логотип компании"
+        >
+          <svg class="icon icon--logo">
+            <use href="img/icons/sprites.svg#ic_logo"></use>
+          </svg>
+        </a>
+        <button
+          class="action-button mobile-nav__header-button--search"
+          aria-label="Кнопка поиска"
+          type="button"
+        >
+          <svg class="icon icon--search">
+            <use href="img/icons/sprites.svg#ic_search"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-menu">
+        <ul class="mobile-nav-menu__list">
+          <li class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link" href="#!">Ремонт техники</a>
+          </li>
+          <li class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link" href="#!">Услуги и сервисы</a>
+          </li>
+          <li class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link" href="#!"
+              >Корпоративным клиентам</a
+            >
+          </li>
+          <li class="mobile-nav-menu__item">
+            <a
+              class="mobile-nav-menu__link mobile-nav-menu__link--active"
+              href="#!"
+              >Продавцам техники</a
+            >
+          </li>
+          <li class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link" href="#!">Партнерам</a>
+          </li>
+          <li class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link" href="#!">Производителям</a>
+          </li>
+          <li class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link" href="#!">Наши сервисные центры</a>
+          </li>
+          <li class="mobile-nav-menu__item">
+            <a class="mobile-nav-menu__link" href="#!">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-nav__footer">
+        <div class="mobile-nav__buttons">
+          <button
+            class="action-button mobile-nav__footer-button--call"
+            type="button"
+          >
+            <svg class="icon icon--call">
+              <use href="img/icons/sprites.svg#ic_call"></use>
+            </svg>
+          </button>
+          <button
+            class="action-button mobile-nav__footer-button--chat"
+            type="button"
+          >
+            <svg class="icon icon--chat">
+              <use href="img/icons/sprites.svg#ic_chat"></use>
+            </svg>
+          </button>
+          <button
+            class="action-button mobile-nav__footer-button--profile"
+            type="button"
+          >
+            <svg class="icon icon--profile">
+              <use href="img/icons/sprites.svg#ic_profile"></use>
+            </svg>
+          </button>
+        </div>
+        <a class="mobile-nav__email" href="mailto:mail@cps.com">mail@cps.com</a>
+        <a class="mobile-nav__phone" href="tel:+78008908900">8 800 890 8900</a>
+        <div class="mobile-nav__langs">
+          <a
+            class="mobile-nav__lang mobile-nav_lang--ru mobile-nav__lang--active"
+            href="#!"
+            >ru</a
+          >
+          <a class="mobile-nav__lang mobile-nav_lang--en" href="#!">en</a>
+          <a class="mobile-nav__lang mobile-nav_lang--ch" href="#!">ch</a>
+        </div>
+      </div>
+    </aside>
+  </body>
 </html>
