@@ -1,8 +1,9 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env) => {
   const isDev = env.mode === 'development';
@@ -39,6 +40,7 @@ module.exports = (env) => {
       rules: [
         {
           test: /\.js$/,
+
           include: path.resolve(__dirname, 'src/js'),
           exclude: /node_modules/,
           use: {

@@ -1,9 +1,10 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import prettier from 'eslint-plugin-prettier';
 import _import from 'eslint-plugin-import';
 import globals from 'globals';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import js from '@eslint/js';
 import { FlatCompat } from '@eslint/eslintrc';
 
@@ -36,10 +37,11 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
 
       ecmaVersion: 'latest',
-      sourceType: 'module',
+      sourceType: 'commonjs',
     },
 
     settings: {
@@ -76,9 +78,14 @@ export default [
 
       indent: ['error', 2],
       'linebreak-style': [0, 'windows'],
-      'prettier/prettier': 'error',
+      'prettier/prettier': [
+        'error',
+        {
+          endOfLine: 'auto',
+        },
+      ],
       quotes: ['error', 'single'],
-      semi: ['error', 'never'],
+      semi: ['warn', 'always'],
     },
   },
 ];
